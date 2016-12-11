@@ -16,4 +16,6 @@ fork := true
 
 //products in Runtime <<= products in Compile
 
-javaOptions <++= AspectjKeys.weaverOptions in Aspectj
+javaOptions ++= {
+  AspectjKeys.weaverOptions in Aspectj value
+}
